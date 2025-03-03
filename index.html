@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>無人自助麻將館 - 訂位系統當機</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            text-align: center;
+            padding: 50px;
+        }
+        .error-container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            animation: shake 0.5s ease-in-out infinite alternate;
+        }
+        .error-title {
+            color: #d9534f;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .error-message {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #555;
+        }
+        .retry-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #d9534f;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .retry-button:hover {
+            background-color: #c9302c;
+        }
+        @keyframes shake {
+            0% { transform: translateX(-5px); }
+            100% { transform: translateX(5px); }
+        }
+    </style>
+</head>
+<body>
+<div class="error-container">
+    <div class="error-title">系統繁忙，請稍後再試</div>
+    <div class="error-message">由於人數過多，訂位系統暫時無法使用，請稍後重新整理頁面。</div>
+    <button class="retry-button" onclick="location.reload();">重新整理</button>
+</div>
+</body>
+</html>
