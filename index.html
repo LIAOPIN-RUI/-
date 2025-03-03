@@ -3,44 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>無人自助麻將館 - 訂位系統當機</title>
+    <title>廖品睿麻將館 - 訂位系統當機</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f8f8f8;
+            font-family: "Microsoft JhengHei", Arial, sans-serif;
+            background-color: #e8f5e9;
             text-align: center;
             padding: 50px;
         }
+        .logo {
+            width: 100px;
+            height: auto;
+            margin-bottom: 20px;
+        }
         .error-container {
             background-color: #fff;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 60px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
             display: inline-block;
             animation: shake 0.5s ease-in-out infinite alternate;
+            max-width: 600px;
         }
         .error-title {
-            color: #d9534f;
-            font-size: 24px;
+            color: #388e3c;
+            font-size: 32px;
             font-weight: bold;
         }
         .error-message {
-            margin-top: 10px;
-            font-size: 18px;
-            color: #555;
+            margin-top: 20px;
+            font-size: 22px;
+            color: #444;
+            text-align: center;
+            font-weight: 500;
+            line-height: 1.6;
         }
         .retry-button {
-            margin-top: 20px;
-            padding: 10px 20px;
-            font-size: 16px;
+            margin-top: 30px;
+            padding: 15px 30px;
+            font-size: 18px;
             color: white;
-            background-color: #d9534f;
+            background-color: #388e3c;
             border: none;
-            border-radius: 5px;
+            border-radius: 8px;
             cursor: pointer;
+            font-weight: bold;
         }
         .retry-button:hover {
-            background-color: #c9302c;
+            background-color: #2e7d32;
         }
         @keyframes shake {
             0% { transform: translateX(-5px); }
@@ -49,9 +59,11 @@
     </style>
 </head>
 <body>
+<img src="img/mmm.jpg" alt="廖品睿麻將館 Logo" class="logo">
+<h1>廖品睿麻將館</h1>
 <div class="error-container">
-    <div class="error-title">系統繁忙，請稍後再試</div>
-    <div class="error-message">由於人數過多，訂位系統暫時無法使用，請稍後重新整理頁面。</div>
+    <div class="error-title">目前已滿桌，請稍後</div>
+    <div class="error-message">目前所有麻將桌都已被預訂，導致訂位系統無法接受新的預約。建議您稍後再試，或者考慮選擇其他時段進行預約。感謝您的耐心等待！</div>
     <button class="retry-button" onclick="location.reload();">重新整理</button>
 </div>
 </body>
